@@ -32,7 +32,7 @@ namespace MappingFramework
         bool isChildOf(MappingNode parentNode);
         bool isChildOf(string uniqueID);
         Mapping createEmptyMapping(bool reverse);
-        MappingNode findNode(List<string> mappingPathNames);
+        MappingNode findNode(List<string> mappingPathNames, Dictionary<string, MappingNode> foundNodes);
         bool isReadOnly { get; }
         MappingSet mappingSet { get; set;}
         string getMappingPathString();
