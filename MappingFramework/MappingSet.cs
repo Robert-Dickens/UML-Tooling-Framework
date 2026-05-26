@@ -17,5 +17,6 @@ namespace MappingFramework
         IEnumerable<UML.Classes.Kernel.NamedElement> contexts { get;}
         void loadAllMappings();
         void loadMappings(UML.Classes.Kernel.NamedElement sourceElement);
-	}
+        IEnumerable<MappingNode> getFilteredNodes(string filter, bool isSource = true);
+    }
 }

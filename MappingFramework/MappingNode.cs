@@ -36,6 +36,7 @@ namespace MappingFramework
         bool isReadOnly { get; }
         MappingSet mappingSet { get; set;}
         string getMappingPathString();
+        string mappingPathExportString{ get; }
         bool isTarget { get; set; }
     }
 }
