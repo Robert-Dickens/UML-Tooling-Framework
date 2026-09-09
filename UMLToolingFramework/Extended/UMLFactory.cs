@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ExceptionServices;
-using System.Windows.Forms;
 using TSF.UmlToolingFramework;
 
 namespace TSF.UmlToolingFramework.UML.Extended
@@ -544,7 +543,7 @@ namespace TSF.UmlToolingFramework.UML.Extended
             }
             catch (System.AccessViolationException e)
             {
-                MessageBox.Show($"Error: {e.Message} {Environment.NewLine}{e.StackTrace}");
+                throw new Exception("Access violation exception while creating tagged values. This may be due to a bug in the underlying UML tool. Please check the logs for more details.", e);
             }
             return taggedValues;
         }
